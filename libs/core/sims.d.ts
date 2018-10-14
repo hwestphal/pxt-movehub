@@ -10,6 +10,22 @@ declare namespace movehub {
     function led(color: Color): void;
 
     /**
+     * Execute when button is pressed
+     */
+    //% weight=81
+    //% blockId=mhOnButtonPressed block="when button is pressed"
+    //% shim=movehub::onButtonPressedAsync promise
+    function onButtonPressed(handler: () => void): void;
+
+    /**
+     * Execute when button is released
+     */
+    //% weight=80
+    //% blockId=mhOnButtonReleased block="when button is released"
+    //% shim=movehub::onButtonReleasedAsync promise
+    function onButtonReleased(handler: () => void): void;
+
+    /**
      * Wait for some time
      * @param delay time to wait in seconds, eg: 5
      */

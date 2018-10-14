@@ -12,6 +12,24 @@ namespace pxsim.movehub {
     }
 
     /**
+     * Execute when button is pressed
+     */
+    //% weight=81
+    //% blockId=mhOnButtonPressed block="when button is pressed"
+    export async function onButtonPressedAsync(handler: RefAction) {
+        await moveHub().subscribeButton("pressed", () => runtime.runFiberAsync(handler));
+    }
+
+    /**
+     * Execute when button is released
+     */
+    //% weight=80
+    //% blockId=mhOnButtonReleased block="when button is released"
+    export async function onButtonReleasedAsync(handler: RefAction) {
+        await moveHub().subscribeButton("released", () => runtime.runFiberAsync(handler));
+    }
+
+    /**
      * Wait for some time
      * @param delay time to wait in seconds, eg: 5
      */
