@@ -1,6 +1,6 @@
 declare const enum Color {
-    Off,
-    Black = 0,
+    Black,
+    Off = 0,
     Pink,
     Purple,
     Blue,
@@ -20,6 +20,11 @@ declare const enum Orientation {
     Left,
     Right,
     Front,
+}
+
+declare const enum ColorAndDistanceMode {
+    ColorAndDistance,
+    Luminosity,
 }
 
 declare const enum TiltMode {

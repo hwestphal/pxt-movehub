@@ -243,31 +243,85 @@ declare namespace motorD {
     function backwardAngled(speed: number, angle: number): void;
 
 }
+declare namespace colorAndDistanceC {
+    /**
+     * Execute when color and distance has changed
+     */
+    //% weight=9
+    //% blockId=mh_c_onColorAndDistanceChanged block="C: when color and distance has changed"
+    //% shim=colorAndDistanceC::onColorAndDistanceChangedAsync promise
+    function onColorAndDistanceChanged(handler: (color: Color | undefined, distance: number) => void): void;
+
+    /**
+     * Execute when luminosity has changed
+     */
+    //% weight=8
+    //% blockId=mh_c_onLuminosityChanged block="C: when luminosity has changed"
+    //% shim=colorAndDistanceC::onLuminosityChangedAsync promise
+    function onLuminosityChanged(handler: (luminosity: number) => void): void;
+
+    /**
+     * Set sensor mode
+     * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
+     */
+    //% weight=7
+    //% blockId=mh_c_cd_mode block="C: set color and distance sensor mode to %mode"
+    //% shim=colorAndDistanceC::modeAsync promise
+    function mode(mode: ColorAndDistanceMode): void;
+
+}
+declare namespace colorAndDistanceD {
+    /**
+     * Execute when color and distance has changed
+     */
+    //% weight=9
+    //% blockId=mh_d_onColorAndDistanceChanged block="D: when color and distance has changed"
+    //% shim=colorAndDistanceD::onColorAndDistanceChangedAsync promise
+    function onColorAndDistanceChanged(handler: (color: Color | undefined, distance: number) => void): void;
+
+    /**
+     * Execute when luminosity has changed
+     */
+    //% weight=8
+    //% blockId=mh_d_onLuminosityChanged block="D: when luminosity has changed"
+    //% shim=colorAndDistanceD::onLuminosityChangedAsync promise
+    function onLuminosityChanged(handler: (luminosity: number) => void): void;
+
+    /**
+     * Set sensor mode
+     * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
+     */
+    //% weight=7
+    //% blockId=mh_d_cd_mode block="D: set color and distance sensor mode to %mode"
+    //% shim=colorAndDistanceD::modeAsync promise
+    function mode(mode: ColorAndDistanceMode): void;
+
+}
 declare namespace tilt {
     /**
      * Execute when tilt has changed (simple mode)
      */
     //% weight=9
-    //% blockId=mh_onTiltChangedSimple block="when tilt has changed"
-    //% shim=tilt::onTiltChangedSimpleAsync promise
-    function onTiltChangedSimple(handler: (orientation: Orientation) => void): void;
+    //% blockId=mh_tilt_onChangedSimple block="when tilt has changed"
+    //% shim=tilt::onChangedSimpleAsync promise
+    function onChangedSimple(handler: (orientation: Orientation) => void): void;
 
     /**
      * Execute when tilt has changed (precise mode)
      */
     //% weight=8
-    //% blockId=mh_onTiltChangedPrecise block="when tilt has changed"
-    //% shim=tilt::onTiltChangedPreciseAsync promise
-    function onTiltChangedPrecise(handler: (x: number, y: number, z: number) => void): void;
+    //% blockId=mh_tilt_onChangedPrecise block="when tilt has changed"
+    //% shim=tilt::onChangedPreciseAsync promise
+    function onChangedPrecise(handler: (x: number, y: number, z: number) => void): void;
 
     /**
-     * Set tilt mode
-     * @param mode tilt mode, eg: TiltMode.Precise
+     * Set sensor mode
+     * @param mode sensor mode, eg: TiltMode.Precise
      */
     //% weight=7
-    //% blockId=mh_tiltMode block="set tilt mode to %mode"
-    //% shim=tilt::tiltModeAsync promise
-    function tiltMode(mode: TiltMode): void;
+    //% blockId=mh_tilt_mode block="set tilt sensor mode to %mode"
+    //% shim=tilt::modeAsync promise
+    function mode(mode: TiltMode): void;
 
 }
 declare namespace movehub {

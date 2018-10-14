@@ -267,13 +267,73 @@ namespace pxsim.motorD {
     }
 }
 
+namespace pxsim.colorAndDistanceC {
+    /**
+     * Execute when color and distance has changed
+     */
+    //% weight=9
+    //% blockId=mh_c_onColorAndDistanceChanged block="C: when color and distance has changed"
+    export async function onColorAndDistanceChangedAsync(handler: (color: Color | undefined, distance: number) => void) {
+        await moveHub().colorAndDistanceC.subscribe("colorAndDistance", (value) => runtime.runFiberAsync(handler as any, value.color, value.distance));
+    }
+
+    /**
+     * Execute when luminosity has changed
+     */
+    //% weight=8
+    //% blockId=mh_c_onLuminosityChanged block="C: when luminosity has changed"
+    export async function onLuminosityChangedAsync(handler: (luminosity: number) => void) {
+        await moveHub().colorAndDistanceC.subscribe("luminosity", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Set sensor mode
+     * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
+     */
+    //% weight=7
+    //% blockId=mh_c_cd_mode block="C: set color and distance sensor mode to %mode"
+    export async function modeAsync(mode: ColorAndDistanceMode) {
+        await moveHub().colorAndDistanceC.setLuminosityMode(!!mode);
+    }
+}
+
+namespace pxsim.colorAndDistanceD {
+    /**
+     * Execute when color and distance has changed
+     */
+    //% weight=9
+    //% blockId=mh_d_onColorAndDistanceChanged block="D: when color and distance has changed"
+    export async function onColorAndDistanceChangedAsync(handler: (color: Color | undefined, distance: number) => void) {
+        await moveHub().colorAndDistanceD.subscribe("colorAndDistance", (value) => runtime.runFiberAsync(handler as any, value.color, value.distance));
+    }
+
+    /**
+     * Execute when luminosity has changed
+     */
+    //% weight=8
+    //% blockId=mh_d_onLuminosityChanged block="D: when luminosity has changed"
+    export async function onLuminosityChangedAsync(handler: (luminosity: number) => void) {
+        await moveHub().colorAndDistanceD.subscribe("luminosity", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Set sensor mode
+     * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
+     */
+    //% weight=7
+    //% blockId=mh_d_cd_mode block="D: set color and distance sensor mode to %mode"
+    export async function modeAsync(mode: ColorAndDistanceMode) {
+        await moveHub().colorAndDistanceD.setLuminosityMode(!!mode);
+    }
+}
+
 namespace pxsim.tilt {
     /**
      * Execute when tilt has changed (simple mode)
      */
     //% weight=9
-    //% blockId=mh_onTiltChangedSimple block="when tilt has changed"
-    export async function onTiltChangedSimpleAsync(handler: (orientation: Orientation) => void) {
+    //% blockId=mh_tilt_onChangedSimple block="when tilt has changed"
+    export async function onChangedSimpleAsync(handler: (orientation: Orientation) => void) {
         await moveHub().subscribeTilt("simple", (value) => runtime.runFiberAsync(handler as any, value));
     }
 
@@ -281,18 +341,18 @@ namespace pxsim.tilt {
      * Execute when tilt has changed (precise mode)
      */
     //% weight=8
-    //% blockId=mh_onTiltChangedPrecise block="when tilt has changed"
-    export async function onTiltChangedPreciseAsync(handler: (x: number, y: number, z: number) => void) {
+    //% blockId=mh_tilt_onChangedPrecise block="when tilt has changed"
+    export async function onChangedPreciseAsync(handler: (x: number, y: number, z: number) => void) {
         await moveHub().subscribeTilt("precise", (value) => runtime.runFiberAsync(handler as any, value.x, value.y, value.z));
     }
 
     /**
-     * Set tilt mode
-     * @param mode tilt mode, eg: TiltMode.Precise
+     * Set sensor mode
+     * @param mode sensor mode, eg: TiltMode.Precise
      */
     //% weight=7
-    //% blockId=mh_tiltMode block="set tilt mode to %mode"
-    export async function tiltModeAsync(mode: TiltMode) {
+    //% blockId=mh_tilt_mode block="set tilt sensor mode to %mode"
+    export async function modeAsync(mode: TiltMode) {
         await moveHub().setTiltPreciseMode(!!mode);
     }
 }
