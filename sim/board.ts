@@ -6,6 +6,17 @@ declare interface Window {
     releaseMoveHub(): Promise<void>;
 }
 
+interface IColorAndDistanceValue {
+    color: Color | undefined;
+    distance: number;
+}
+
+interface ITiltValue {
+    x: number;
+    y: number;
+    z: number;
+}
+
 interface IMotor {
     constant(speed: number, speedB?: number): Promise<void>;
     timedAndWait(time: number, speed: number, speedB?: number): Promise<void>;

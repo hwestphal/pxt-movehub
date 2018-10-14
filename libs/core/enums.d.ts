@@ -22,13 +22,7 @@ declare const enum Orientation {
     Front,
 }
 
-interface IColorAndDistanceValue {
-    color: Color | undefined;
-    distance: number;
-}
-
-interface ITiltValue {
-    x: number;
-    y: number;
-    z: number;
+declare const enum TiltMode {
+    Simple,
+    Precise,
 }

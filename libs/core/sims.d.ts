@@ -26,6 +26,31 @@ declare namespace movehub {
     function onButtonReleased(handler: () => void): void;
 
     /**
+     * Execute when tilt has changed (simple mode)
+     */
+    //% weight=73
+    //% blockId=mhOnTiltChangedSimple block="when tilt has changed"
+    //% shim=movehub::onTiltChangedSimpleAsync promise
+    function onTiltChangedSimple(handler: (orientation: Orientation) => void): void;
+
+    /**
+     * Execute when tilt has changed (precise mode)
+     */
+    //% weight=72
+    //% blockId=mhOnTiltChangedPrecise block="when tilt has changed"
+    //% shim=movehub::onTiltChangedPreciseAsync promise
+    function onTiltChangedPrecise(handler: (x: number, y: number, z: number) => void): void;
+
+    /**
+     * Set tilt mode
+     * @param mode tilt mode, eg: TiltMode.Precise
+     */
+    //% weight=71
+    //% blockId=mhTiltMode block="set tilt mode to %mode"
+    //% shim=movehub::tiltModeAsync promise
+    function tiltMode(mode: TiltMode): void;
+
+    /**
      * Wait for some time
      * @param delay time to wait in seconds, eg: 5
      */

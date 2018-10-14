@@ -30,6 +30,34 @@ namespace pxsim.movehub {
     }
 
     /**
+     * Execute when tilt has changed (simple mode)
+     */
+    //% weight=73
+    //% blockId=mhOnTiltChangedSimple block="when tilt has changed"
+    export async function onTiltChangedSimpleAsync(handler: (orientation: Orientation) => void) {
+        await moveHub().subscribeTilt("simple", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Execute when tilt has changed (precise mode)
+     */
+    //% weight=72
+    //% blockId=mhOnTiltChangedPrecise block="when tilt has changed"
+    export async function onTiltChangedPreciseAsync(handler: (x: number, y: number, z: number) => void) {
+        await moveHub().subscribeTilt("precise", (value) => runtime.runFiberAsync(handler as any, value.x, value.y, value.z));
+    }
+
+    /**
+     * Set tilt mode
+     * @param mode tilt mode, eg: TiltMode.Precise
+     */
+    //% weight=71
+    //% blockId=mhTiltMode block="set tilt mode to %mode"
+    export async function tiltModeAsync(mode: TiltMode) {
+        await moveHub().setTiltPreciseMode(!!mode);
+    }
+
+    /**
      * Wait for some time
      * @param delay time to wait in seconds, eg: 5
      */
@@ -39,4 +67,10 @@ namespace pxsim.movehub {
         return Promise.delay(delay * 1000);
     }
 
+}
+
+namespace pxsim {
+    export function log(msg: string) {
+        console.log(`%c${new Date().toISOString()}`, "color:blue; font-style: italic", msg);
+    }
 }
