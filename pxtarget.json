@@ -1,0 +1,35 @@
+{
+    "id": "movehub",
+    "name": "MoveHub",
+    "title": "Move Hub Editor",
+    "corepkg": "core",
+    "bundleddirs": [
+        "libs/core"
+    ],
+    "runtime": {
+        "loopsBlocks": true,
+        "logicBlocks": true,
+        "variablesBlocks": true,
+        "mathBlocks": true,
+        "functionBlocks": true,
+        "listsBlocks": true,
+        "textBlocks": false,
+        "onStartColor": "#f48942",
+        "onStartUnDeletable": true
+    },
+    "simulator": {
+        "autoRun": false,
+        "stopOnChange": true,
+        "hideFullscreen": true,
+        "headless": true
+    },
+    "appTheme": {
+        "availableLocales": [
+            "en",
+            "de"
+        ],
+        "selectLanguage": true,
+        "docMenu": [],
+        "monacoToolbox": true
+    }
+}

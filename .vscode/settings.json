@@ -1,0 +1,10 @@
+{
+    "editor.detectIndentation": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "tslint.jsEnable": true,
+    "tslint.ignoreDefinitionFiles": false,
+    "typescript.tsdk": "node_modules/typescript/lib"
+}

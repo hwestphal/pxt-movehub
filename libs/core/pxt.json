@@ -1,0 +1,14 @@
+{
+    "name": "core",
+    "files": [
+        "pxt-core.d.ts",
+        "pxt-helpers.ts",
+        "enums.d.ts",
+        "sims.d.ts",
+        "ns.ts",
+        "_locales/de/core-strings.json",
+        "_locales/de/core-jsdoc-strings.json"
+    ],
+    "testFiles": [],
+    "dependencies": {}
+}
