@@ -47,6 +47,8 @@ interface IMoveHub {
 
 namespace pxsim {
 
+    let killPromise = Promise.resolve();
+
     initCurrentRuntime = () => {
         runtime.board = new MoveHubBoard();
     };
@@ -59,13 +61,14 @@ namespace pxsim {
         moveHub: IMoveHub | undefined;
 
         async initAsync(msg: SimulatorRunMessage) {
+            await killPromise;
             this.moveHub = await window.parent.allocateMoveHub();
         }
 
         kill() {
             if (this.moveHub) {
                 this.moveHub = undefined;
-                window.parent.releaseMoveHub();
+                killPromise = window.parent.releaseMoveHub();
             }
         }
     }
