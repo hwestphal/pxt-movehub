@@ -1,4 +1,4 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <variables></variables>
-  <block type="pxt-on-start" deletable="false" x="0" y="0"></block>
+  <block type="pxt-on-start" deletable="true" x="0" y="0"></block>
 </xml>

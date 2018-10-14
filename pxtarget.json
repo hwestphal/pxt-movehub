@@ -15,7 +15,7 @@
         "listsBlocks": true,
         "textBlocks": false,
         "onStartColor": "#f48942",
-        "onStartUnDeletable": true
+        "onStartUnDeletable": false
     },
     "simulator": {
         "autoRun": false,
