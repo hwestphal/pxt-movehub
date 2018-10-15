@@ -23,7 +23,8 @@ declare const enum Orientation {
 }
 
 declare const enum ColorAndDistanceMode {
-    ColorAndDistance,
+    //% block="Color or Distance"
+    ColorOrDistance,
     Luminosity,
 }
 

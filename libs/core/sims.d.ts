@@ -245,12 +245,12 @@ declare namespace motorD {
 }
 declare namespace colorAndDistanceC {
     /**
-     * Execute when color and distance has changed
+     * Execute when color or distance has changed
      */
     //% weight=9
-    //% blockId=mh_c_onColorAndDistanceChanged block="C: when color and distance has changed"
-    //% shim=colorAndDistanceC::onColorAndDistanceChangedAsync promise
-    function onColorAndDistanceChanged(handler: (color: Color | undefined, distance: number) => void): void;
+    //% blockId=mh_c_onColorOrDistanceChanged block="C: when color or distance has changed"
+    //% shim=colorAndDistanceC::onColorOrDistanceChangedAsync promise
+    function onColorOrDistanceChanged(handler: (color: Color | undefined, distance: number) => void): void;
 
     /**
      * Execute when luminosity has changed
@@ -265,19 +265,19 @@ declare namespace colorAndDistanceC {
      * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
      */
     //% weight=7
-    //% blockId=mh_c_cd_mode block="C: set color and distance sensor mode to %mode"
+    //% blockId=mh_c_cd_mode block="C: set color/distance sensor mode to %mode"
     //% shim=colorAndDistanceC::modeAsync promise
     function mode(mode: ColorAndDistanceMode): void;
 
 }
 declare namespace colorAndDistanceD {
     /**
-     * Execute when color and distance has changed
+     * Execute when color or distance has changed
      */
     //% weight=9
-    //% blockId=mh_d_onColorAndDistanceChanged block="D: when color and distance has changed"
-    //% shim=colorAndDistanceD::onColorAndDistanceChangedAsync promise
-    function onColorAndDistanceChanged(handler: (color: Color | undefined, distance: number) => void): void;
+    //% blockId=mh_d_onColorOrDistanceChanged block="D: when color or distance has changed"
+    //% shim=colorAndDistanceD::onColorOrDistanceChangedAsync promise
+    function onColorOrDistanceChanged(handler: (color: Color | undefined, distance: number) => void): void;
 
     /**
      * Execute when luminosity has changed
@@ -292,7 +292,7 @@ declare namespace colorAndDistanceD {
      * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
      */
     //% weight=7
-    //% blockId=mh_d_cd_mode block="D: set color and distance sensor mode to %mode"
+    //% blockId=mh_d_cd_mode block="D: set color/distance sensor mode to %mode"
     //% shim=colorAndDistanceD::modeAsync promise
     function mode(mode: ColorAndDistanceMode): void;
 

@@ -269,11 +269,11 @@ namespace pxsim.motorD {
 
 namespace pxsim.colorAndDistanceC {
     /**
-     * Execute when color and distance has changed
+     * Execute when color or distance has changed
      */
     //% weight=9
-    //% blockId=mh_c_onColorAndDistanceChanged block="C: when color and distance has changed"
-    export async function onColorAndDistanceChangedAsync(handler: (color: Color | undefined, distance: number) => void) {
+    //% blockId=mh_c_onColorOrDistanceChanged block="C: when color or distance has changed"
+    export async function onColorOrDistanceChangedAsync(handler: (color: Color | undefined, distance: number) => void) {
         await moveHub().colorAndDistanceC.subscribe("colorAndDistance", (value) => runtime.runFiberAsync(handler as any, value.color, value.distance));
     }
 
@@ -291,7 +291,7 @@ namespace pxsim.colorAndDistanceC {
      * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
      */
     //% weight=7
-    //% blockId=mh_c_cd_mode block="C: set color and distance sensor mode to %mode"
+    //% blockId=mh_c_cd_mode block="C: set color/distance sensor mode to %mode"
     export async function modeAsync(mode: ColorAndDistanceMode) {
         await moveHub().colorAndDistanceC.setLuminosityMode(!!mode);
     }
@@ -299,11 +299,11 @@ namespace pxsim.colorAndDistanceC {
 
 namespace pxsim.colorAndDistanceD {
     /**
-     * Execute when color and distance has changed
+     * Execute when color or distance has changed
      */
     //% weight=9
-    //% blockId=mh_d_onColorAndDistanceChanged block="D: when color and distance has changed"
-    export async function onColorAndDistanceChangedAsync(handler: (color: Color | undefined, distance: number) => void) {
+    //% blockId=mh_d_onColorOrDistanceChanged block="D: when color or distance has changed"
+    export async function onColorOrDistanceChangedAsync(handler: (color: Color | undefined, distance: number) => void) {
         await moveHub().colorAndDistanceD.subscribe("colorAndDistance", (value) => runtime.runFiberAsync(handler as any, value.color, value.distance));
     }
 
@@ -321,7 +321,7 @@ namespace pxsim.colorAndDistanceD {
      * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
      */
     //% weight=7
-    //% blockId=mh_d_cd_mode block="D: set color and distance sensor mode to %mode"
+    //% blockId=mh_d_cd_mode block="D: set color/distance sensor mode to %mode"
     export async function modeAsync(mode: ColorAndDistanceMode) {
         await moveHub().colorAndDistanceD.setLuminosityMode(!!mode);
     }
