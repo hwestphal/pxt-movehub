@@ -1,4 +1,4 @@
-import { app, BrowserWindow, remote } from "electron";
+import { app, BrowserWindow, globalShortcut } from "electron";
 import * as path from "path";
 import * as pxt from "pxt-core";
 
@@ -6,6 +6,11 @@ let win: BrowserWindow | null;
 
 async function startApp() {
     await pxt.mainCli(path.join(__dirname, ".."), ["serve", "-no-browser"]);
+    globalShortcut.register("CommandOrControl+Shift+I", () => {
+        if (win) {
+            win.webContents.openDevTools({ mode: "right" });
+        }
+    });
     createWindow();
 }
 
@@ -22,7 +27,6 @@ function createWindow() {
     });
     win.maximize();
     win.loadURL(`http://localhost:3232/#local_token=${pxt.globalConfig.localToken}&wsport=3233`);
-    win.webContents.openDevTools();
 }
 
 app.on("ready", startApp);
