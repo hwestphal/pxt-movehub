@@ -360,5 +360,86 @@ declare namespace movehub {
     function wait(delay: number): void;
 
 }
+declare namespace rotationAB {
+    /**
+     * Execute when angle has changed
+     */
+    //% weight=9
+    //% blockId=mh_ab_onAngleChanged block="AB: when angle has changed"
+    //% shim=rotationAB::onAngleChangedAsync promise
+    function onAngleChanged(handler: (angle: number) => void): void;
+
+    /**
+     * Execute when speed has changed
+     */
+    //% weight=8
+    //% blockId=mh_ab_onSpeedChanged block="AB: when speed has changed"
+    //% shim=rotationAB::onSpeedChangedAsync promise
+    function onSpeedChanged(handler: (speed: number) => void): void;
+
+    /**
+     * Set rotation sensor mode
+     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     */
+    //% weight=7
+    //% blockId=mh_ab_mode block="AB: set rotation sensor mode to %mode"
+    //% shim=rotationAB::modeAsync promise
+    function mode(mode: RotationMode): void;
+
+}
+declare namespace rotationC {
+    /**
+     * Execute when angle has changed
+     */
+    //% weight=9
+    //% blockId=mh_c_onAngleChanged block="C: when angle has changed"
+    //% shim=rotationC::onAngleChangedAsync promise
+    function onAngleChanged(handler: (angle: number) => void): void;
+
+    /**
+     * Execute when speed has changed
+     */
+    //% weight=8
+    //% blockId=mh_c_onSpeedChanged block="C: when speed has changed"
+    //% shim=rotationC::onSpeedChangedAsync promise
+    function onSpeedChanged(handler: (speed: number) => void): void;
+
+    /**
+     * Set rotation sensor mode
+     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     */
+    //% weight=7
+    //% blockId=mh_c_mode block="C: set rotation sensor mode to %mode"
+    //% shim=rotationC::modeAsync promise
+    function mode(mode: RotationMode): void;
+
+}
+declare namespace rotationD {
+    /**
+     * Execute when angle has changed
+     */
+    //% weight=9
+    //% blockId=mh_d_onAngleChanged block="D: when angle has changed"
+    //% shim=rotationD::onAngleChangedAsync promise
+    function onAngleChanged(handler: (angle: number) => void): void;
+
+    /**
+     * Execute when speed has changed
+     */
+    //% weight=8
+    //% blockId=mh_d_onSpeedChanged block="D: when speed has changed"
+    //% shim=rotationD::onSpeedChangedAsync promise
+    function onSpeedChanged(handler: (speed: number) => void): void;
+
+    /**
+     * Set rotation sensor mode
+     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     */
+    //% weight=7
+    //% blockId=mh_d_mode block="D: set rotation sensor mode to %mode"
+    //% shim=rotationD::modeAsync promise
+    function mode(mode: RotationMode): void;
+
+}
 
 // Auto-generated. Do not edit. Really.

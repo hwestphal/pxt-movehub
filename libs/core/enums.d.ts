@@ -31,3 +31,8 @@ declare const enum TiltMode {
     Simple,
     Precise,
 }
+
+declare const enum RotationMode {
+    Angle,
+    Speed,
+}

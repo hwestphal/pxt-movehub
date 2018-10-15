@@ -397,6 +397,96 @@ namespace pxsim.movehub {
     }
 }
 
+namespace pxsim.rotationAB {
+    /**
+     * Execute when angle has changed
+     */
+    //% weight=9
+    //% blockId=mh_ab_onAngleChanged block="AB: when angle has changed"
+    export async function onAngleChangedAsync(handler: (angle: number) => void) {
+        await moveHub().motorAB.subscribe("angle", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Execute when speed has changed
+     */
+    //% weight=8
+    //% blockId=mh_ab_onSpeedChanged block="AB: when speed has changed"
+    export async function onSpeedChangedAsync(handler: (speed: number) => void) {
+        await moveHub().motorAB.subscribe("speed", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Set rotation sensor mode
+     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     */
+    //% weight=7
+    //% blockId=mh_ab_mode block="AB: set rotation sensor mode to %mode"
+    export async function modeAsync(mode: RotationMode) {
+        await moveHub().motorAB.setSpeedMode(!!mode);
+    }
+}
+
+namespace pxsim.rotationC {
+    /**
+     * Execute when angle has changed
+     */
+    //% weight=9
+    //% blockId=mh_c_onAngleChanged block="C: when angle has changed"
+    export async function onAngleChangedAsync(handler: (angle: number) => void) {
+        await moveHub().motorC.subscribe("angle", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Execute when speed has changed
+     */
+    //% weight=8
+    //% blockId=mh_c_onSpeedChanged block="C: when speed has changed"
+    export async function onSpeedChangedAsync(handler: (speed: number) => void) {
+        await moveHub().motorC.subscribe("speed", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Set rotation sensor mode
+     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     */
+    //% weight=7
+    //% blockId=mh_c_mode block="C: set rotation sensor mode to %mode"
+    export async function modeAsync(mode: RotationMode) {
+        await moveHub().motorC.setSpeedMode(!!mode);
+    }
+}
+
+namespace pxsim.rotationD {
+    /**
+     * Execute when angle has changed
+     */
+    //% weight=9
+    //% blockId=mh_d_onAngleChanged block="D: when angle has changed"
+    export async function onAngleChangedAsync(handler: (angle: number) => void) {
+        await moveHub().motorD.subscribe("angle", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Execute when speed has changed
+     */
+    //% weight=8
+    //% blockId=mh_d_onSpeedChanged block="D: when speed has changed"
+    export async function onSpeedChangedAsync(handler: (speed: number) => void) {
+        await moveHub().motorD.subscribe("speed", (value) => runtime.runFiberAsync(handler as any, value));
+    }
+
+    /**
+     * Set rotation sensor mode
+     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     */
+    //% weight=7
+    //% blockId=mh_d_mode block="D: set rotation sensor mode to %mode"
+    export async function modeAsync(mode: RotationMode) {
+        await moveHub().motorD.setSpeedMode(!!mode);
+    }
+}
+
 namespace pxsim {
     export function log(msg: string) {
         console.log(`%c${new Date().toISOString()}`, "color:blue; font-style: italic", msg);

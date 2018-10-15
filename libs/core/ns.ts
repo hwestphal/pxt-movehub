@@ -44,6 +44,18 @@ namespace tilt {
     }
 }
 
+//% color=#888888 weight=46 icon="\uf1b9" advanced=true block="Motor AB"
+namespace rotationAB {
+}
+
+//% color=#00bcd4 weight=45 icon="\uf013" advanced=true block="Motor C"
+namespace rotationC {
+}
+
+//% color=#00bcd4 weight=44 icon="\uf013" advanced=true block="Motor D"
+namespace rotationD {
+}
+
 declare namespace console {
     /**
      * Print out message in browser console
