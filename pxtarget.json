@@ -1,7 +1,6 @@
 {
     "id": "movehub",
-    "name": "MoveHub",
-    "title": "Move Hub Editor",
+    "name": "Move Hub IDE",
     "corepkg": "core",
     "bundleddirs": [
         "libs/core"
@@ -25,10 +24,9 @@
     },
     "appTheme": {
         "availableLocales": [
-            "en",
-            "de"
+            "en"
         ],
-        "selectLanguage": true,
+        "selectLanguage": false,
         "docMenu": [],
         "monacoToolbox": true
     }

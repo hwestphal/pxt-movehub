@@ -1,16 +1,16 @@
-//% color=#00bcd4 weight=104 icon="\uf04b" block="Motor AB"
+//% color=#888888 weight=104 icon="\uf1b9" block="Motor AB"
 namespace motorAB {
 }
 
-//% color=#00bcd4 weight=103 icon="\uf04b" block="Motor C"
+//% color=#00bcd4 weight=103 icon="\uf013" block="Motor C"
 namespace motorC {
 }
 
-//% color=#00bcd4 weight=102 icon="\uf04b" block="Motor D"
+//% color=#00bcd4 weight=102 icon="\uf013" block="Motor D"
 namespace motorD {
 }
 
-//% color=#00bcd4 weight=100 icon="\uf04b" block="Misc."
+//% color=#74df00 weight=100 icon="\uf0c2" block="Misc."
 namespace movehub {
     /**
      * Return color value
@@ -23,15 +23,15 @@ namespace movehub {
     }
 }
 
-//% color=#00bcd4 weight=49 icon="\uf04b" advanced=true block="Color/Distance C"
+//% color=#ff8000 weight=49 icon="\uf06e" advanced=true block="Color/Distance C"
 namespace colorAndDistanceC {
 }
 
-//% color=#00bcd4 weight=48 icon="\uf04b" advanced=true block="Color/Distance D"
+//% color=#ff8000 weight=48 icon="\uf06e" advanced=true block="Color/Distance D"
 namespace colorAndDistanceD {
 }
 
-//% color=#00bcd4 weight=47 icon="\uf04b" advanced=true
+//% color=#ff00bf weight=47 icon="\uf124" advanced=true
 namespace tilt {
     /**
      * Return orientation value
