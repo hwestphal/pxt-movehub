@@ -243,13 +243,13 @@ declare namespace motorD {
     function backwardAngled(speed: number, angle: number): void;
 
 }
-declare namespace colorAndDistanceC {
+declare namespace colorDistanceC {
     /**
      * Execute when color or distance has changed
      */
     //% weight=9
     //% blockId=mh_c_onColorOrDistanceChanged block="C: when color or distance has changed"
-    //% shim=colorAndDistanceC::onColorOrDistanceChangedAsync promise
+    //% shim=colorDistanceC::onColorOrDistanceChangedAsync promise
     function onColorOrDistanceChanged(handler: (color: Color | undefined, distance: number) => void): void;
 
     /**
@@ -257,7 +257,7 @@ declare namespace colorAndDistanceC {
      */
     //% weight=8
     //% blockId=mh_c_onLuminosityChanged block="C: when luminosity has changed"
-    //% shim=colorAndDistanceC::onLuminosityChangedAsync promise
+    //% shim=colorDistanceC::onLuminosityChangedAsync promise
     function onLuminosityChanged(handler: (luminosity: number) => void): void;
 
     /**
@@ -266,17 +266,17 @@ declare namespace colorAndDistanceC {
      */
     //% weight=7
     //% blockId=mh_c_cd_mode block="C: set color/distance sensor mode to %mode"
-    //% shim=colorAndDistanceC::modeAsync promise
+    //% shim=colorDistanceC::modeAsync promise
     function mode(mode: ColorAndDistanceMode): void;
 
 }
-declare namespace colorAndDistanceD {
+declare namespace colorDistanceD {
     /**
      * Execute when color or distance has changed
      */
     //% weight=9
     //% blockId=mh_d_onColorOrDistanceChanged block="D: when color or distance has changed"
-    //% shim=colorAndDistanceD::onColorOrDistanceChangedAsync promise
+    //% shim=colorDistanceD::onColorOrDistanceChangedAsync promise
     function onColorOrDistanceChanged(handler: (color: Color | undefined, distance: number) => void): void;
 
     /**
@@ -284,7 +284,7 @@ declare namespace colorAndDistanceD {
      */
     //% weight=8
     //% blockId=mh_d_onLuminosityChanged block="D: when luminosity has changed"
-    //% shim=colorAndDistanceD::onLuminosityChangedAsync promise
+    //% shim=colorDistanceD::onLuminosityChangedAsync promise
     function onLuminosityChanged(handler: (luminosity: number) => void): void;
 
     /**
@@ -293,7 +293,7 @@ declare namespace colorAndDistanceD {
      */
     //% weight=7
     //% blockId=mh_d_cd_mode block="D: set color/distance sensor mode to %mode"
-    //% shim=colorAndDistanceD::modeAsync promise
+    //% shim=colorDistanceD::modeAsync promise
     function mode(mode: ColorAndDistanceMode): void;
 
 }

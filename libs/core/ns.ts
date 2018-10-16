@@ -24,11 +24,11 @@ namespace movehub {
 }
 
 //% color=#ff8000 weight=49 icon="\uf06e" advanced=true block="Color/Distance C"
-namespace colorAndDistanceC {
+namespace colorDistanceC {
 }
 
 //% color=#ff8000 weight=48 icon="\uf06e" advanced=true block="Color/Distance D"
-namespace colorAndDistanceD {
+namespace colorDistanceD {
 }
 
 //% color=#ff00bf weight=47 icon="\uf124" advanced=true

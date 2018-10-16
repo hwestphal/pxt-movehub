@@ -267,7 +267,7 @@ namespace pxsim.motorD {
     }
 }
 
-namespace pxsim.colorAndDistanceC {
+namespace pxsim.colorDistanceC {
     /**
      * Execute when color or distance has changed
      */
@@ -297,7 +297,7 @@ namespace pxsim.colorAndDistanceC {
     }
 }
 
-namespace pxsim.colorAndDistanceD {
+namespace pxsim.colorDistanceD {
     /**
      * Execute when color or distance has changed
      */
