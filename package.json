@@ -1,18 +1,20 @@
 {
     "private": true,
     "version": "1.0.0",
+    "main": "dist/main.js",
     "scripts": {
         "build": "rm -rf built/ libs/core/built/ dist/ && pxt staticpkg && tsc -p app",
-        "start": "rm -rf built/ libs/core/built/ dist/ projects/ && tsc -p app && electron dist/main.js"
+        "start": "rm -rf built/ libs/core/built/ dist/ projects/ && tsc -p app && electron . -D",
+        "start:static": "electron ."
     },
     "dependencies": {
-        "@hwestphal/ts-movehub": "^0.1.0",
-        "electron": "^3.0.2",
-        "pxt-core": "^3.12.17"
+        "@hwestphal/ts-movehub": "^0.1.0"
     },
     "devDependencies": {
         "@types/bluebird": "^2.0.33",
+        "electron": "^3.0.2",
         "pxt": "^0.5.1",
+        "pxt-core": "^3.12.17",
         "tslint": "^5.10.0",
         "typescript": "2.6.2"
     }

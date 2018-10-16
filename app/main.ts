@@ -1,11 +1,17 @@
 import { app, BrowserWindow, globalShortcut } from "electron";
 import * as path from "path";
-import * as pxt from "pxt-core";
+
+const dev = process.argv.slice(-1)[0] === "-D";
 
 let win: BrowserWindow | null;
+let localToken: string;
 
 async function startApp() {
-    await pxt.mainCli(path.join(__dirname, ".."), ["serve", "-no-browser"]);
+    if (dev) {
+        const pxt = await import("pxt-core");
+        await pxt.mainCli(path.join(__dirname, ".."), ["serve", "-no-browser"]);
+        localToken = pxt.globalConfig.localToken;
+    }
     globalShortcut.register("CommandOrControl+Shift+I", () => {
         if (win) {
             win.webContents.openDevTools({ mode: "right" });
@@ -26,7 +32,11 @@ function createWindow() {
         win = null;
     });
     win.maximize();
-    win.loadURL(`http://localhost:3232/#local_token=${pxt.globalConfig.localToken}&wsport=3233`);
+    if (dev) {
+        win.loadURL(`http://localhost:3232/#local_token=${localToken}&wsport=3233`);
+    } else {
+        win.loadFile(path.join(__dirname, "..", "built", "packaged", "index.html"));
+    }
 }
 
 app.on("ready", startApp);
