@@ -2,6 +2,18 @@
 
 *pxt-movehub* is a programming environment for [LEGO® Boost](https://www.lego.com/themes/boost) on Windows 10, based on [Microsoft MakeCode](https://github.com/Microsoft/pxt). It's meant for teaching beginners in programming fundamentals.
 
+## Features ##
+
+- Motor (constant, timed and angled)
+- Rotation notifications (angle and speed)
+- Color and distance sensor notifications (color/distance and luminosity)
+- LED
+- Button notifications (pressed and released)
+- Tilt sensor notifications (3 axis simple and precise)
+
+## [Example](examples/vernie.js) ##
+![Vernie](examples/vernie.png)
+
 ## How to run ##
 
 First you have to install some build tools for compiling the native dependencies of this project:
