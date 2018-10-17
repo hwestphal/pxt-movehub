@@ -24,9 +24,10 @@
     },
     "appTheme": {
         "availableLocales": [
-            "en"
+            "en",
+            "de"
         ],
-        "selectLanguage": false,
+        "selectLanguage": true,
         "docMenu": [],
         "monacoToolbox": true
     }
