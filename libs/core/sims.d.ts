@@ -262,12 +262,12 @@ declare namespace colorDistanceC {
 
     /**
      * Set sensor mode
-     * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
+     * @param mode sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_c_cd_mode block="C: set color/distance sensor mode to %mode"
-    //% shim=colorDistanceC::modeAsync promise
-    function mode(mode: ColorAndDistanceMode): void;
+    //% blockId=mh_c_cd_mode block="C: luminosity %mode=toggleYesNo"
+    //% shim=colorDistanceC::luminosityModeAsync promise
+    function luminosityMode(mode: boolean): void;
 
 }
 declare namespace colorDistanceD {
@@ -289,12 +289,12 @@ declare namespace colorDistanceD {
 
     /**
      * Set sensor mode
-     * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
+     * @param mode sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_d_cd_mode block="D: set color/distance sensor mode to %mode"
-    //% shim=colorDistanceD::modeAsync promise
-    function mode(mode: ColorAndDistanceMode): void;
+    //% blockId=mh_d_cd_mode block="D: luminosity %mode=toggleYesNo"
+    //% shim=colorDistanceD::luminosityModeAsync promise
+    function luminosityMode(mode: boolean): void;
 
 }
 declare namespace tilt {
@@ -316,12 +316,12 @@ declare namespace tilt {
 
     /**
      * Set sensor mode
-     * @param mode sensor mode, eg: TiltMode.Precise
+     * @param mode sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_tilt_mode block="set tilt sensor mode to %mode"
-    //% shim=tilt::modeAsync promise
-    function mode(mode: TiltMode): void;
+    //% blockId=mh_tilt_mode block="precise tilt %mode=toggleYesNo"
+    //% shim=tilt::preciseModeAsync promise
+    function preciseMode(mode: boolean): void;
 
 }
 declare namespace movehub {
@@ -379,12 +379,12 @@ declare namespace rotationAB {
 
     /**
      * Set rotation sensor mode
-     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     * @param mode rotation sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_ab_mode block="AB: set rotation sensor mode to %mode"
-    //% shim=rotationAB::modeAsync promise
-    function mode(mode: RotationMode): void;
+    //% blockId=mh_ab_mode block="AB: speed %mode=toggleYesNo"
+    //% shim=rotationAB::speedModeAsync promise
+    function speedMode(mode: boolean): void;
 
 }
 declare namespace rotationC {
@@ -406,12 +406,12 @@ declare namespace rotationC {
 
     /**
      * Set rotation sensor mode
-     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     * @param mode rotation sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_c_mode block="C: set rotation sensor mode to %mode"
-    //% shim=rotationC::modeAsync promise
-    function mode(mode: RotationMode): void;
+    //% blockId=mh_c_mode block="C: speed %mode=toggleYesNo"
+    //% shim=rotationC::speedModeAsync promise
+    function speedMode(mode: boolean): void;
 
 }
 declare namespace rotationD {
@@ -433,12 +433,12 @@ declare namespace rotationD {
 
     /**
      * Set rotation sensor mode
-     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     * @param mode rotation sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_d_mode block="D: set rotation sensor mode to %mode"
-    //% shim=rotationD::modeAsync promise
-    function mode(mode: RotationMode): void;
+    //% blockId=mh_d_mode block="D: speed %mode=toggleYesNo"
+    //% shim=rotationD::speedModeAsync promise
+    function speedMode(mode: boolean): void;
 
 }
 

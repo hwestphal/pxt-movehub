@@ -1,8 +1,8 @@
 {
-    "colorDistanceC.mode": "Setze Sensor-Modus",
+    "colorDistanceC.luminosityMode": "Setze Sensor-Modus",
     "colorDistanceC.onColorOrDistanceChanged": "Wenn Farbe oder Distanz geändert",
     "colorDistanceC.onLuminosityChanged": "Wenn Helligkeit geändert",
-    "colorDistanceD.mode": "Setze Sensor-Modus",
+    "colorDistanceD.luminosityMode": "Setze Sensor-Modus",
     "colorDistanceD.onColorOrDistanceChanged": "Wenn Farbe oder Distanz geändert",
     "colorDistanceD.onLuminosityChanged": "Wenn Helligkeit geändert",
     "motorAB.backward": "Rückwärts",
@@ -32,16 +32,16 @@
     "movehub.onButtonPressed": "Wenn Knopf gedrückt",
     "movehub.onButtonReleased": "Wenn Knopf losgelassen",
     "movehub.wait": "Warte für einige Zeit",
-    "rotationAB.mode": "Setze Rotationssensor-Modus",
     "rotationAB.onAngleChanged": "Wenn Winkel geändert",
     "rotationAB.onSpeedChanged": "Wenn Geschwindigkeit geändert",
-    "rotationC.mode": "Setze Rotationssensor-Modus",
+    "rotationAB.speedMode": "Setze Rotationssensor-Modus",
     "rotationC.onAngleChanged": "Wenn Winkel geändert",
     "rotationC.onSpeedChanged": "Wenn Geschwindigkeit geändert",
-    "rotationD.mode": "Setze Rotationssensor-Modus",
+    "rotationC.speedMode": "Setze Rotationssensor-Modus",
     "rotationD.onAngleChanged": "Wenn Winkel geändert",
     "rotationD.onSpeedChanged": "Wenn Geschwindigkeit geändert",
-    "tilt.mode": "Setze Sensor-Modus",
+    "rotationD.speedMode": "Setze Rotationssensor-Modus",
     "tilt.onChangedPrecise": "Wenn Neigung geändert (genauer Modus)",
-    "tilt.onChangedSimple": "Wenn Neigung geändert (einfacher Modus)"
+    "tilt.onChangedSimple": "Wenn Neigung geändert (einfacher Modus)",
+    "tilt.preciseMode": "Setze Sensor-Modus"
 }

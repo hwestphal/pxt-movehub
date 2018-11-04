@@ -18,4 +18,4 @@ rotationAB.onSpeedChanged(function (speed) {
         turn()
     }
 })
-rotationAB.mode(RotationMode.Speed)
+rotationAB.speedMode(true)

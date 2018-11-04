@@ -39,24 +39,3 @@ declare const enum Orientation {
     //% block=Front
     Front,
 }
-
-declare const enum ColorAndDistanceMode {
-    //% block="Color or Distance"
-    ColorOrDistance,
-    //% block=Luminosity
-    Luminosity,
-}
-
-declare const enum TiltMode {
-    //% block=Simple
-    Simple,
-    //% block=Precise
-    Precise,
-}
-
-declare const enum RotationMode {
-    //% block=Angle
-    Angle,
-    //% block=Speed
-    Speed,
-}

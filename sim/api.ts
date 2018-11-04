@@ -288,12 +288,12 @@ namespace pxsim.colorDistanceC {
 
     /**
      * Set sensor mode
-     * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
+     * @param mode sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_c_cd_mode block="C: set color/distance sensor mode to %mode"
-    export async function modeAsync(mode: ColorAndDistanceMode) {
-        await moveHub().colorAndDistanceC.setLuminosityMode(!!mode);
+    //% blockId=mh_c_cd_mode block="C: luminosity %mode=toggleYesNo"
+    export async function luminosityModeAsync(mode: boolean) {
+        await moveHub().colorAndDistanceC.setLuminosityMode(mode);
     }
 }
 
@@ -318,12 +318,12 @@ namespace pxsim.colorDistanceD {
 
     /**
      * Set sensor mode
-     * @param mode sensor mode, eg: ColorAndDistanceMode.Luminosity
+     * @param mode sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_d_cd_mode block="D: set color/distance sensor mode to %mode"
-    export async function modeAsync(mode: ColorAndDistanceMode) {
-        await moveHub().colorAndDistanceD.setLuminosityMode(!!mode);
+    //% blockId=mh_d_cd_mode block="D: luminosity %mode=toggleYesNo"
+    export async function luminosityModeAsync(mode: boolean) {
+        await moveHub().colorAndDistanceD.setLuminosityMode(mode);
     }
 }
 
@@ -348,12 +348,12 @@ namespace pxsim.tilt {
 
     /**
      * Set sensor mode
-     * @param mode sensor mode, eg: TiltMode.Precise
+     * @param mode sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_tilt_mode block="set tilt sensor mode to %mode"
-    export async function modeAsync(mode: TiltMode) {
-        await moveHub().setTiltPreciseMode(!!mode);
+    //% blockId=mh_tilt_mode block="precise tilt %mode=toggleYesNo"
+    export async function preciseModeAsync(mode: boolean) {
+        await moveHub().setTiltPreciseMode(mode);
     }
 }
 
@@ -418,12 +418,12 @@ namespace pxsim.rotationAB {
 
     /**
      * Set rotation sensor mode
-     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     * @param mode rotation sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_ab_mode block="AB: set rotation sensor mode to %mode"
-    export async function modeAsync(mode: RotationMode) {
-        await moveHub().motorAB.setSpeedMode(!!mode);
+    //% blockId=mh_ab_mode block="AB: speed %mode=toggleYesNo"
+    export async function speedModeAsync(mode: boolean) {
+        await moveHub().motorAB.setSpeedMode(mode);
     }
 }
 
@@ -448,12 +448,12 @@ namespace pxsim.rotationC {
 
     /**
      * Set rotation sensor mode
-     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     * @param mode rotation sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_c_mode block="C: set rotation sensor mode to %mode"
-    export async function modeAsync(mode: RotationMode) {
-        await moveHub().motorC.setSpeedMode(!!mode);
+    //% blockId=mh_c_mode block="C: speed %mode=toggleYesNo"
+    export async function speedModeAsync(mode: boolean) {
+        await moveHub().motorC.setSpeedMode(mode);
     }
 }
 
@@ -478,12 +478,12 @@ namespace pxsim.rotationD {
 
     /**
      * Set rotation sensor mode
-     * @param mode rotation sensor mode, eg: RotationMode.Speed
+     * @param mode rotation sensor flag, eg: true
      */
     //% weight=7
-    //% blockId=mh_d_mode block="D: set rotation sensor mode to %mode"
-    export async function modeAsync(mode: RotationMode) {
-        await moveHub().motorD.setSpeedMode(!!mode);
+    //% blockId=mh_d_mode block="D: speed %mode=toggleYesNo"
+    export async function speedModeAsync(mode: boolean) {
+        await moveHub().motorD.setSpeedMode(mode);
     }
 }
 
